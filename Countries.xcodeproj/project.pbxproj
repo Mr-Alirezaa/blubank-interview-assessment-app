@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		C0F06F2D293A994500871408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F2C293A994500871408 /* AppDelegate.swift */; };
 		C0F06F2F293A994500871408 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F2E293A994500871408 /* SceneDelegate.swift */; };
-		C0F06F31293A994500871408 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F30293A994500871408 /* ViewController.swift */; };
-		C0F06F34293A994500871408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F06F32293A994500871408 /* Main.storyboard */; };
+		C0F06F31293A994500871408 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F30293A994500871408 /* CountriesListViewController.swift */; };
 		C0F06F36293A994600871408 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F06F35293A994600871408 /* Assets.xcassets */; };
 		C0F06F39293A994600871408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F06F37293A994600871408 /* LaunchScreen.storyboard */; };
+		C0F2C9D8293AA415000F4F40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0F2C9D7293AA415000F4F40 /* SnapKit */; };
+		C0F2C9DA293AA490000F4F40 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2C9D9293AA490000F4F40 /* CountryCell.swift */; };
+		C0F2C9DF293AA6F3000F4F40 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2C9DE293AA6F3000F4F40 /* UICollectionView+Extensions.swift */; };
+		C0F2C9E1293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F2C9E0293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0F06F29293A994500871408 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F06F2C293A994500871408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F06F2E293A994500871408 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0F06F30293A994500871408 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C0F06F33293A994500871408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0F06F30293A994500871408 /* CountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListViewController.swift; sourceTree = "<group>"; };
 		C0F06F35293A994600871408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F06F38293A994600871408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F06F3A293A994600871408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0F2C9D9293AA490000F4F40 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		C0F2C9DE293AA6F3000F4F40 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		C0F2C9E0293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICompositionalLayout+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F2C9D8293AA415000F4F40 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +64,47 @@
 			children = (
 				C0F06F2C293A994500871408 /* AppDelegate.swift */,
 				C0F06F2E293A994500871408 /* SceneDelegate.swift */,
-				C0F06F30293A994500871408 /* ViewController.swift */,
-				C0F06F32293A994500871408 /* Main.storyboard */,
+				C0F2C9E2293AAB21000F4F40 /* Controllers */,
+				C0F2C9E3293AAB38000F4F40 /* Views */,
+				C0F2C9DB293AA4EE000F4F40 /* UI Extensions */,
+				C0F2C9DC293AA4FD000F4F40 /* Supporting Files */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		C0F2C9DB293AA4EE000F4F40 /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0F2C9DE293AA6F3000F4F40 /* UICollectionView+Extensions.swift */,
+				C0F2C9E0293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift */,
+			);
+			path = "UI Extensions";
+			sourceTree = "<group>";
+		};
+		C0F2C9DC293AA4FD000F4F40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				C0F06F35293A994600871408 /* Assets.xcassets */,
 				C0F06F37293A994600871408 /* LaunchScreen.storyboard */,
 				C0F06F3A293A994600871408 /* Info.plist */,
 			);
-			path = Countries;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0F2C9E2293AAB21000F4F40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0F06F30293A994500871408 /* CountriesListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C0F2C9E3293AAB38000F4F40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0F2C9D9293AA490000F4F40 /* CountryCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,9 @@
 			dependencies = (
 			);
 			name = Countries;
+			packageProductDependencies = (
+				C0F2C9D7293AA415000F4F40 /* SnapKit */,
+			);
 			productName = Countries;
 			productReference = C0F06F29293A994500871408 /* Countries.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = C0F06F20293A994500871408;
+			packageReferences = (
+				C0F2C9D6293AA415000F4F40 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C0F06F2A293A994500871408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +173,6 @@
 			files = (
 				C0F06F39293A994600871408 /* LaunchScreen.storyboard in Resources */,
 				C0F06F36293A994600871408 /* Assets.xcassets in Resources */,
-				C0F06F34293A994500871408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F06F31293A994500871408 /* ViewController.swift in Sources */,
+				C0F2C9DF293AA6F3000F4F40 /* UICollectionView+Extensions.swift in Sources */,
+				C0F2C9DA293AA490000F4F40 /* CountryCell.swift in Sources */,
+				C0F06F31293A994500871408 /* CountriesListViewController.swift in Sources */,
 				C0F06F2D293A994500871408 /* AppDelegate.swift in Sources */,
 				C0F06F2F293A994500871408 /* SceneDelegate.swift in Sources */,
+				C0F2C9E1293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C0F06F32293A994500871408 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C0F06F33293A994500871408 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C0F06F37293A994600871408 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,10 +328,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Countries/Info.plist;
+				INFOPLIST_FILE = "Countries/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -319,10 +358,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Countries/Info.plist;
+				INFOPLIST_FILE = "Countries/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -364,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F2C9D6293AA415000F4F40 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0F2C9D7293AA415000F4F40 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F2C9D6293AA415000F4F40 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F06F21293A994500871408 /* Project object */;
 }
