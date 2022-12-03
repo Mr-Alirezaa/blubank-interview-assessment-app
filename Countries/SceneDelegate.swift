@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let viewController = CountriesListViewController()
+        viewController.interactor = CountriesListInteractor(presenter: CountriesListPresenter(controller: viewController))
+        
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
