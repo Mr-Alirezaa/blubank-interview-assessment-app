@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import CountriesCore
 
 class CountryCell: UICollectionViewCell {
@@ -14,12 +15,8 @@ class CountryCell: UICollectionViewCell {
     private let checkImageView: UIImageView = UIImageView()
 
     override var isSelected: Bool {
-        get {
-            super.isSelected
-        }
-        set {
-            super.isSelected = newValue
-            updateAppearnce(isSelected: newValue)
+        didSet {
+            updateSelectionAppearance(isSelected: isSelected)
         }
     }
 
@@ -36,6 +33,7 @@ class CountryCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = ""
+        isSelected = false
     }
 
     func update(using country: Country) {
@@ -53,7 +51,7 @@ class CountryCell: UICollectionViewCell {
         checkImageView.contentMode = .scaleAspectFit
         checkImageView.tintColor = UIColor(named: "AccentColor")
 
-        updateAppearnce(isSelected: isSelected)
+        updateSelectionAppearance(isSelected: isSelected)
     }
 
     private func setupConstraints() {
@@ -79,7 +77,7 @@ class CountryCell: UICollectionViewCell {
         }
     }
 
-    private func updateAppearnce(isSelected: Bool) {
+    private func updateSelectionAppearance(isSelected: Bool) {
         checkImageView.image = isSelected ? UIImage(systemName: "checkmark.circle")?.withRenderingMode(.alwaysTemplate) : nil
     }
 }

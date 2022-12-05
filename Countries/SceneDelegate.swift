@@ -18,11 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
 
-        let viewController = CountriesListViewController()
-        viewController.interactor = CountriesListInteractor(presenter: CountriesListPresenter(controller: viewController))
+        let viewController = HomeViewController()
+        viewController.interactor = HomeInteractor(presenter: HomePresenter(controller: viewController))
         
         let navigationController = UINavigationController(rootViewController: viewController)
-        
+        navigationController.navigationBar.prefersLargeTitles = true
+
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()

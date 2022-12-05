@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03811C3293CB29D00210AC9 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */; };
+		C03811C6293CDC9600210AC9 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */; };
 		C0CF207D293BA72E00A874A0 /* CountriesCore in Frameworks */ = {isa = PBXBuildFile; productRef = C0CF207C293BA72E00A874A0 /* CountriesCore */; };
 		C0CF2080293BC6A300A874A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0CF207F293BC6A300A874A0 /* Localizable.strings */; };
 		C0CF2083293BC76A00A874A0 /* LocalizationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = C0CF2082293BC76A00A874A0 /* LocalizationBackport */; };
@@ -15,6 +17,12 @@
 		C0CF208B293BE7F800A874A0 /* CountriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF208A293BE7F800A874A0 /* CountriesListPresenter.swift */; };
 		C0CF208E293BE96800A874A0 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF208D293BE96800A874A0 /* Interactor.swift */; };
 		C0CF2090293BEAAB00A874A0 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF208F293BEAAB00A874A0 /* Presenter.swift */; };
+		C0CF2095293BF07200A874A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF2094293BF07200A874A0 /* HomeViewController.swift */; };
+		C0CF2097293BF08200A874A0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF2096293BF08200A874A0 /* HomeInteractor.swift */; };
+		C0CF2099293BF08900A874A0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF2098293BF08900A874A0 /* HomePresenter.swift */; };
+		C0CF209B293BF10B00A874A0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF209A293BF10B00A874A0 /* CollectionViewController.swift */; };
+		C0CF209D293BF5DC00A874A0 /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF209C293BF5DC00A874A0 /* EmptyCell.swift */; };
+		C0CF209F293BFD1A00A874A0 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CF209E293BFD1A00A874A0 /* UIButton+Extensions.swift */; };
 		C0F06F2D293A994500871408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F2C293A994500871408 /* AppDelegate.swift */; };
 		C0F06F2F293A994500871408 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F2E293A994500871408 /* SceneDelegate.swift */; };
 		C0F06F31293A994500871408 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F06F30293A994500871408 /* CountriesListViewController.swift */; };
@@ -27,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 		C0CF207A293BA3D100A874A0 /* CountriesCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesCore; sourceTree = "<group>"; };
 		C0CF207F293BC6A300A874A0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C0CF2085293BD5AC00A874A0 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
@@ -34,6 +44,12 @@
 		C0CF208A293BE7F800A874A0 /* CountriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListPresenter.swift; sourceTree = "<group>"; };
 		C0CF208D293BE96800A874A0 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		C0CF208F293BEAAB00A874A0 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		C0CF2094293BF07200A874A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C0CF2096293BF08200A874A0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C0CF2098293BF08900A874A0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C0CF209A293BF10B00A874A0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C0CF209C293BF5DC00A874A0 /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
+		C0CF209E293BFD1A00A874A0 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		C0F06F29293A994500871408 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F06F2C293A994500871408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F06F2E293A994500871408 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C03811C1293CB28B00210AC9 /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
 		C0CF207B293BA72E00A874A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				C0F06F30293A994500871408 /* CountriesListViewController.swift */,
-				C0CF208A293BE7F800A874A0 /* CountriesListPresenter.swift */,
 				C0CF2088293BE79500A874A0 /* CountriesListInteractor.swift */,
+				C0CF208A293BE7F800A874A0 /* CountriesListPresenter.swift */,
 			);
 			path = CountriesList;
 			sourceTree = "<group>";
@@ -90,8 +114,19 @@
 			children = (
 				C0CF208D293BE96800A874A0 /* Interactor.swift */,
 				C0CF208F293BEAAB00A874A0 /* Presenter.swift */,
+				C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		C0CF2093293BF06300A874A0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C0CF2094293BF07200A874A0 /* HomeViewController.swift */,
+				C0CF2096293BF08200A874A0 /* HomeInteractor.swift */,
+				C0CF2098293BF08900A874A0 /* HomePresenter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C0F06F20293A994500871408 = {
@@ -132,6 +167,7 @@
 			children = (
 				C0F2C9DE293AA6F3000F4F40 /* UICollectionView+Extensions.swift */,
 				C0F2C9E0293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift */,
+				C0CF209E293BFD1A00A874A0 /* UIButton+Extensions.swift */,
 			);
 			path = "UI Extensions";
 			sourceTree = "<group>";
@@ -150,7 +186,10 @@
 		C0F2C9E2293AAB21000F4F40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C0CF209A293BF10B00A874A0 /* CollectionViewController.swift */,
+				C0CF2093293BF06300A874A0 /* Home */,
 				C0CF2087293BE77B00A874A0 /* CountriesList */,
+				C03811C1293CB28B00210AC9 /* SearchResults */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				C0F2C9D9293AA490000F4F40 /* CountryCell.swift */,
+				C0CF209C293BF5DC00A874A0 /* EmptyCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,10 +290,18 @@
 				C0F06F31293A994500871408 /* CountriesListViewController.swift in Sources */,
 				C0CF2089293BE79500A874A0 /* CountriesListInteractor.swift in Sources */,
 				C0CF208B293BE7F800A874A0 /* CountriesListPresenter.swift in Sources */,
+				C0CF2099293BF08900A874A0 /* HomePresenter.swift in Sources */,
+				C0CF2097293BF08200A874A0 /* HomeInteractor.swift in Sources */,
+				C0CF209D293BF5DC00A874A0 /* EmptyCell.swift in Sources */,
+				C0CF209B293BF10B00A874A0 /* CollectionViewController.swift in Sources */,
+				C0CF209F293BFD1A00A874A0 /* UIButton+Extensions.swift in Sources */,
+				C03811C3293CB29D00210AC9 /* SearchResultsViewController.swift in Sources */,
+				C03811C6293CDC9600210AC9 /* OrderedDictionary.swift in Sources */,
 				C0F06F2D293A994500871408 /* AppDelegate.swift in Sources */,
 				C0CF2086293BD5AC00A874A0 /* UserDefaults+Extensions.swift in Sources */,
 				C0F06F2F293A994500871408 /* SceneDelegate.swift in Sources */,
 				C0F2C9E1293AAAB2000F4F40 /* UICompositionalLayout+Extensions.swift in Sources */,
+				C0CF2095293BF07200A874A0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
