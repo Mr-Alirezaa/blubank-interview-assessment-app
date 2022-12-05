@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Countries
+
+  Created by Alireza Asadi on 12/3/22.
+  
+*/
+
+"Home" = "Home";
+"The list is empty!" = "The list is empty!";
+"Select Countries" = "Select Countries";
+
+"Countries" = "Countries";
+"Error" = "Error";
+"Dismiss" = "Dismiss";
+"Done" = "Done";
+
+"Search for countries..." = "Search for countries...";
