@@ -8,7 +8,7 @@ Since minimum iOS version was mentioned 13.0, I used `UICollectionViewDiffableDa
 
 I tried my best to stay in the directions of [Human Interface Guideline](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/) and not overly customize UI elements.
 
-Architecture of the app is (somehow-customized 😅) Clean.
+Architecture of the app is (somehow-customized 😅) Clean. Although I haven't written tests, I tried to write a highly testable code.
 
 ## Installation
 

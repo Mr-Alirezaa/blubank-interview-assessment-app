@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CountriesCore
 
 extension UserDefaults {
     func value<Value: Codable>(forKey key: String) -> Value? {

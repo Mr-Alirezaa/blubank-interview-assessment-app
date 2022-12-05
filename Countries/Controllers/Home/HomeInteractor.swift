@@ -14,24 +14,21 @@ protocol HomeInteractorProtocol: Interactor where PresenterType == HomePresenter
 
 class HomeInteractor: HomeInteractorProtocol {
     let presenter: HomePresenter
-    private var countries: [Country]
+    private let countryUseCase: CountryUseCase
+    private var countries: [Country] = []
 
-    init(presenter: HomePresenter, countries: [Country] = []) {
+    init(presenter: HomePresenter, countryUseCase: CountryUseCase = CountryUseCase()) {
         self.presenter = presenter
-        self.countries = countries
+        self.countryUseCase = countryUseCase
     }
 
     func update() async {
-        let selectedCountries = selectedCountries()
-        countries = selectedCountries
-        await presenter.updateCountriesList(using: selectedCountries)
-    }
-
-    private func selectedCountries() -> [Country] {
-        if let selectedCountries = UserDefaults.standard.selectedCountries {
-            return selectedCountries
+        do {
+            let selectedCountries = try await countryUseCase.selectedCountries()
+            countries = selectedCountries
+            await presenter.updateCountriesList(using: selectedCountries)
+        } catch {
+            // This will not happen.
         }
-        UserDefaults.standard.selectedCountries = []
-        return []
     }
 }

@@ -96,7 +96,7 @@ class CountriesListViewController: CollectionViewController {
     }
 
     @objc private func doneButtonTapped(_ doneButton: UIBarButtonItem) {
-        interactor.saveSelectedCountries()
+        Task(priority: .userInitiated) { await interactor.saveSelectedCountries() }
         navigationController?.popViewController(animated: true)
     }
 
