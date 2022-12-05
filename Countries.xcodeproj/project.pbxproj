@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C03811C3293CB29D00210AC9 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */; };
-		C03811C6293CDC9600210AC9 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */; };
 		C0CF207D293BA72E00A874A0 /* CountriesCore in Frameworks */ = {isa = PBXBuildFile; productRef = C0CF207C293BA72E00A874A0 /* CountriesCore */; };
 		C0CF2080293BC6A300A874A0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0CF207F293BC6A300A874A0 /* Localizable.strings */; };
 		C0CF2083293BC76A00A874A0 /* LocalizationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = C0CF2082293BC76A00A874A0 /* LocalizationBackport */; };
@@ -35,8 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
+		C0071C96293E88C300A46394 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C0CF207A293BA3D100A874A0 /* CountriesCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesCore; sourceTree = "<group>"; };
 		C0CF207F293BC6A300A874A0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C0CF2085293BD5AC00A874A0 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
@@ -76,12 +73,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C03811C1293CB28B00210AC9 /* SearchResults */ = {
+		C076AAF0293E860B00A14D44 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				C03811C2293CB29D00210AC9 /* SearchResultsViewController.swift */,
+				C0CF209A293BF10B00A874A0 /* CollectionViewController.swift */,
 			);
-			path = SearchResults;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		C0CF207B293BA72E00A874A0 /* Frameworks */ = {
@@ -114,7 +111,6 @@
 			children = (
 				C0CF208D293BE96800A874A0 /* Interactor.swift */,
 				C0CF208F293BEAAB00A874A0 /* Presenter.swift */,
-				C03811C5293CDC9600210AC9 /* OrderedDictionary.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -132,6 +128,7 @@
 		C0F06F20293A994500871408 = {
 			isa = PBXGroup;
 			children = (
+				C0071C96293E88C300A46394 /* README.md */,
 				C0CF207A293BA3D100A874A0 /* CountriesCore */,
 				C0F06F2B293A994500871408 /* Countries */,
 				C0F06F2A293A994500871408 /* Products */,
@@ -186,10 +183,9 @@
 		C0F2C9E2293AAB21000F4F40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C0CF209A293BF10B00A874A0 /* CollectionViewController.swift */,
+				C076AAF0293E860B00A14D44 /* CollectionView */,
 				C0CF2093293BF06300A874A0 /* Home */,
 				C0CF2087293BE77B00A874A0 /* CountriesList */,
-				C03811C1293CB28B00210AC9 /* SearchResults */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,8 +291,6 @@
 				C0CF209D293BF5DC00A874A0 /* EmptyCell.swift in Sources */,
 				C0CF209B293BF10B00A874A0 /* CollectionViewController.swift in Sources */,
 				C0CF209F293BFD1A00A874A0 /* UIButton+Extensions.swift in Sources */,
-				C03811C3293CB29D00210AC9 /* SearchResultsViewController.swift in Sources */,
-				C03811C6293CDC9600210AC9 /* OrderedDictionary.swift in Sources */,
 				C0F06F2D293A994500871408 /* AppDelegate.swift in Sources */,
 				C0CF2086293BD5AC00A874A0 /* UserDefaults+Extensions.swift in Sources */,
 				C0F06F2F293A994500871408 /* SceneDelegate.swift in Sources */,

@@ -6,6 +6,13 @@
   
 */
 
+"Home" = "Home";
+"The list is empty!" = "The list is empty!";
+"Select Countries" = "Select Countries";
+
 "Countries" = "Countries";
 "Error" = "Error";
 "Dismiss" = "Dismiss";
+"Done" = "Done";
+
+"Search for countries..." = "Search for countries...";

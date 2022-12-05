@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Alireza Asadi on 12/3/22.
-//
-
 import Foundation
 
 public protocol CountryRepositoryProtocol {

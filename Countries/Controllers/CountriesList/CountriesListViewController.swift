@@ -10,7 +10,6 @@ import SnapKit
 import CountriesCore
 import LocalizationBackport
 
-
 class CountriesListViewController: CollectionViewController {
     enum Section {
         case countries
@@ -18,7 +17,7 @@ class CountriesListViewController: CollectionViewController {
 
     var interactor: (any CountriesListInteractorProtocol)!
 
-    private(set) var dataSource: UICollectionViewDiffableDataSource<Section, Country>!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Country>!
 
     private var searchController: UISearchController!
 
@@ -31,7 +30,7 @@ class CountriesListViewController: CollectionViewController {
             .withTintColor(UIColor(named: "AccentColor")!)
 
         let searchBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(searchButtonTapped))
-        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
+        let doneBarButton = UIBarButtonItem(title: String(localized: "Done"), style: .plain, target: self, action: #selector(doneButtonTapped))
         navigationItem.rightBarButtonItems = [searchBarButton, doneBarButton]
 
         let searchController = UISearchController(searchResultsController: nil)
@@ -73,12 +72,6 @@ class CountriesListViewController: CollectionViewController {
     }
 
     @MainActor func updateCollection(with snapshot: NSDiffableDataSourceSnapshot<Section, Country>) {
-        dataSource.apply(snapshot)
-    }
-
-    @MainActor func updateSnapshot(at row: Country) {
-        var snapshot = dataSource.snapshot()
-        snapshot.reloadItems([row])
         dataSource.apply(snapshot)
     }
 
