@@ -30,8 +30,9 @@ class CountriesListViewController: CollectionViewController {
             .withRenderingMode(.alwaysTemplate)
             .withTintColor(UIColor(named: "AccentColor")!)
 
-        let barButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(searchButtonTapped))
-        navigationItem.rightBarButtonItem = barButton
+        let searchBarButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(searchButtonTapped))
+        let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneButtonTapped))
+        navigationItem.rightBarButtonItems = [searchBarButton, doneBarButton]
 
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
@@ -99,6 +100,11 @@ class CountriesListViewController: CollectionViewController {
 
     @objc private func searchButtonTapped(_ searchButton: UIBarButtonItem) {
         searchController.searchBar.becomeFirstResponder()
+    }
+
+    @objc private func doneButtonTapped(_ doneButton: UIBarButtonItem) {
+        interactor.saveSelectedCountries()
+        navigationController?.popViewController(animated: true)
     }
 
     private func makeDataSource(for collectionView: UICollectionView) -> UICollectionViewDiffableDataSource<Section, Country> {

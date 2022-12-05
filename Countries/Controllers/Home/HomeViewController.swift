@@ -40,12 +40,15 @@ class HomeViewController: CollectionViewController {
         collectionView.registerClass(CountryCell.self)
         collectionView.registerClass(EmptyCell.self)
         collectionView.delegate = self
+        collectionView.allowsSelection = false
+        collectionView.allowsMultipleSelection = false
 
         let dataSource = makeDataSource(for: collectionView)
         self.dataSource = dataSource
 
-        let snapshot = makeSnapshot(countries: [])
-        dataSource.apply(snapshot)
+        Task(priority: .userInitiated) {
+            await interactor.update()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

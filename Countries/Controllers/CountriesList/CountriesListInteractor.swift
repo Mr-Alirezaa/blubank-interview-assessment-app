@@ -11,6 +11,7 @@ import CountriesCore
 protocol CountriesListInteractorProtocol: Interactor where PresenterType == CountriesListPresenter {
     func initialize() async
     func refresh() async
+    func saveSelectedCountries()
     
     func isCountrySelected(_ country: Country) -> Bool
     func select(_ country: Country)
@@ -27,6 +28,7 @@ class CountriesListInteractor: CountriesListInteractorProtocol {
     private let countriesRepo: CountryRepositoryProtocol
 
     private var countriesData: CountriesData = [:]
+    private var selectedCountries: [Country] { countriesData.compactMap { $1 ? $0 : nil } }
 
     init(presenter: CountriesListPresenter, countriesRepo: CountryRepositoryProtocol = CountryRepository()) {
         self.presenter = presenter
@@ -35,20 +37,23 @@ class CountriesListInteractor: CountriesListInteractorProtocol {
 
     func initialize() async {
         if let localCountries = locallySavedCountries() {
-            countriesData = createCountriesData(with: localCountries, selectedCountries: [])
+            let selectedCountries = locallySavedSelectedCountries()
+            countriesData = createCountriesData(with: localCountries, selectedCountries: Set(selectedCountries))
         } else {
+            await presenter.beginRefreshing()
             do {
                 let task = Task(priority: .userInitiated) {
                     try await getLatestCountriesList()
                 }
 
                 let countries = try await task.value
-                saveToLocalStorage(countries: countries)
+                saveCountriesToLocalStorage(countries)
                 self.countriesData = createCountriesData(with: countries, selectedCountries: [])
             } catch {
                 await presenter.present(error: error)
                 return
             }
+            await presenter.endRefreshing()
         }
 
         await presenter.updateCountriesList(using: Array(countriesData.keys))
@@ -62,14 +67,17 @@ class CountriesListInteractor: CountriesListInteractorProtocol {
             }
 
             let countries = try await task.value
-            saveToLocalStorage(countries: countries)
-            let countriesData = createCountriesData(with: countries, selectedCountries: [])
-            self.countriesData = countriesData
+            saveCountriesToLocalStorage(countries)
+            self.countriesData = createCountriesData(with: countries, selectedCountries: Set(selectedCountries))
             await presenter.updateCountriesList(using: countries)
         } catch {
             await presenter.present(error: error)
         }
         await presenter.endRefreshing()
+    }
+
+    func saveSelectedCountries() {
+        saveSelectedCountriesToLocalStorage(selectedCountries)
     }
 
     func isCountrySelected(_ country: Country) -> Bool {
@@ -109,7 +117,7 @@ class CountriesListInteractor: CountriesListInteractorProtocol {
         try await countriesRepo.all()
     }
 
-    private func createCountriesData(with countries: [Country], selectedCountries: [Country]) -> CountriesData {
+    private func createCountriesData(with countries: [Country], selectedCountries: Set<Country>) -> CountriesData {
         countries.reduce(into: [:]) { $0[$1] = selectedCountries.contains($1) }
     }
 
@@ -117,8 +125,16 @@ class CountriesListInteractor: CountriesListInteractorProtocol {
         UserDefaults.standard.allCountries
     }
 
-    private func saveToLocalStorage(countries: [Country]) {
+    private func locallySavedSelectedCountries() -> [Country] {
+        UserDefaults.standard.selectedCountries ?? []
+    }
+
+    private func saveCountriesToLocalStorage(_ countries: [Country]) {
         UserDefaults.standard.allCountries = countries
+    }
+
+    private func saveSelectedCountriesToLocalStorage(_ countries: [Country]) {
+        UserDefaults.standard.selectedCountries = countries
     }
 
     @available(iOS 16.0, *)
